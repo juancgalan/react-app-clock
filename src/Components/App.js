@@ -1,8 +1,8 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './App.sass';
-import Header from './Header.js'
-import Clock from './Clock.js'
+import Header from './Header'
+import ClockFace from '../Containers/ClockFace'
 import Footer from './Footer'
 
 /**
@@ -17,7 +17,7 @@ const App = () => {
     return (
       <div className="App">
         <Header />
-        <Clock />
+        <ClockFace />
         <Footer />
       </div>
     );
