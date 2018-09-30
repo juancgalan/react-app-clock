@@ -23,7 +23,19 @@ const displayDate = (date) => {
     seconds = "0" + seconds;
   }
 
-  return hours + ":" + minutes + ":" + seconds + " " + meridian + "!";
+  return {
+    str: hours + ":" + minutes + ":" + seconds + " " + meridian + "!",
+    hourStyle: {
+      transform: `rotate(${360/12 * date.getHours()}deg)`
+    },
+    minutesStyle: {
+      transform: `rotate(${360/60 * date.getMinutes()}deg)`
+    },
+    secondsStyle: {
+      transform: `rotate(${360/60 * date.getSeconds()}deg)`
+    },
+    hours: date.getHours(),
+  }
 }
 
 const ClockTick = (state = displayDate(new Date()), action)  => {

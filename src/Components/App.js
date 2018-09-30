@@ -4,6 +4,7 @@ import './App.sass';
 import Header from './Header'
 import ClockFace from '../Containers/ClockFace'
 import Footer from './Footer'
+import TimerOptions from '../Containers/TimerOptions';
 
 /**
  * Changed programming style to functional.
@@ -18,6 +19,7 @@ const App = () => {
       <div className="App">
         <Header />
         <ClockFace />
+        <TimerOptions />
         <Footer />
       </div>
     );

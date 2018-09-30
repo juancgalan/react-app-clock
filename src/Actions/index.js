@@ -13,4 +13,23 @@ export const start = (dispatch) => {
   dispatch(tick());
 }
 
+export const setWakeUp = time => ({
+  type: 'SET_WAKEUP',
+  time
+})
+
+export const setLunch = time => ({
+  type: 'SET_LUNCH',
+  time
+})
+
+export const setNap = time => ({
+  type: 'SET_NAP',
+  time
+})
+
+export const toggleParty = party => ({
+  type: 'TOGGLE_PARTY',
+})
+
 export const tick = () => ({ type: 'TIMER_TICK' });
